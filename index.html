@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Among Us: Emergency Meeting | Campus Gaming Event</title>
+  <meta name="description" content="Join the ultimate Among Us: Emergency Meeting on 17 October 2026 at NTB Room-TC103. Play smart. Lie better. Survive longer." />
+
+  <!-- Google Fonts: Space Grotesk (Headings) and Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <!-- Space Background with Twinkling Stars -->
+  <div class="space-starfield" aria-hidden="true">
+    <div class="stars-layer stars-small"></div>
+    <div class="stars-layer stars-medium"></div>
+    <div class="stars-layer stars-large"></div>
+  </div>
+
+  <!-- Reusable SVG Crewmate Symbol Definition -->
+  <svg style="display: none;" aria-hidden="true">
+    <defs>
+      <!-- Base Crewmate Bean Vector -->
+      <g id="crewmate-graphic">
+        <!-- Backpack / Oxygen Tank -->
+        <rect x="10" y="44" width="22" height="60" rx="11" class="suit-backpack" />
+        <!-- Main Bean Body with split stubby legs -->
+        <path d="M 34 52 C 34 18, 96 18, 96 52 L 96 116 C 96 128, 74 128, 74 116 L 74 104 C 74 100, 56 100, 56 104 L 56 116 C 56 128, 34 128, 34 116 Z" class="suit-body" />
+        <!-- Visor Outer Border -->
+        <rect x="52" y="38" width="52" height="32" rx="16" class="suit-visor-border" />
+        <!-- Visor Glass Fill -->
+        <rect x="55" y="41" width="46" height="26" rx="13" class="suit-visor-glass" />
+        <!-- Visor Reflection Highlight -->
+        <path d="M 64 47 Q 76 44 88 47" class="suit-visor-shine" />
+      </g>
+    </defs>
+  </svg>
+
+  <!-- 1. STICKY NAVBAR -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <!-- Wordmark Logo -->
+      <a href="#" class="nav-brand" aria-label="Among Us Emergency Meeting Home">
+        <svg class="nav-logo-icon" viewBox="0 0 120 145" aria-hidden="true">
+          <use href="#crewmate-graphic" class="crewmate-red"></use>
+        </svg>
+        <span class="nav-brand-text">EMERGENCY<span class="nav-brand-highlight">MEETING</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+        <li><a href="#prizes" class="nav-link">Prizes</a></li>
+        <li><a href="#register" class="nav-link nav-link-cta">Register</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <!-- Floating Drifting Crewmates in Outer Space -->
+      <div class="drifting-crewmates-container" aria-hidden="true">
+        <!-- Floating Red Crewmate -->
+        <div class="floating-crewmate floater-red">
+          <svg viewBox="0 0 120 145" class="crewmate-svg">
+            <use href="#crewmate-graphic" class="crewmate-red"></use>
+          </svg>
+        </div>
+        <!-- Floating Cyan Crewmate -->
+        <div class="floating-crewmate floater-cyan">
+          <svg viewBox="0 0 120 145" class="crewmate-svg">
+            <use href="#crewmate-graphic" class="crewmate-cyan"></use>
+          </svg>
+        </div>
+        <!-- Floating Yellow Crewmate -->
+        <div class="floating-crewmate floater-yellow">
+          <svg viewBox="0 0 120 145" class="crewmate-svg">
+            <use href="#crewmate-graphic" class="crewmate-yellow"></use>
+          </svg>
+        </div>
+        <!-- Floating Purple Crewmate -->
+        <div class="floating-crewmate floater-purple">
+          <svg viewBox="0 0 120 145" class="crewmate-svg">
+            <use href="#crewmate-graphic" class="crewmate-purple"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <!-- Emergency Siren Badge -->
+        <div class="hero-badge reveal">
+          <svg class="icon-inline siren-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>SPACESHIP ALERT: INCOMING EVENT</span>
+        </div>
+
+        <!-- Big Headline -->
+        <h1 class="hero-title reveal">Among Us: Emergency Meeting</h1>
+
+        <!-- Tagline -->
+        <p class="hero-tagline reveal">Play smart. Lie better. Survive longer.</p>
+
+        <!-- Chips: Date/Time, Venue, Entry -->
+        <div class="hero-chips reveal">
+          <div class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>17 october 2026, 5:00 PM</span>
+          </div>
+
+          <div class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>NTB , Room- TC103</span>
+          </div>
+
+          <div class="chip chip-free">
+            <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span>Free, open to all students</span>
+          </div>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="countdown-panel reveal" aria-live="polite">
+          <div class="countdown-label">
+            <span class="pulse-dot"></span> TIME UNTIL EMERGENCY MEETING
+          </div>
+          <div class="countdown-grid" id="countdown-grid">
+            <div class="countdown-unit">
+              <span class="countdown-value" id="days">00</span>
+              <span class="countdown-unit-label">DAYS</span>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="hours">00</span>
+              <span class="countdown-unit-label">HOURS</span>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="minutes">00</span>
+              <span class="countdown-unit-label">MINS</span>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="seconds">00</span>
+              <span class="countdown-unit-label">SECS</span>
+            </div>
+          </div>
+          <div class="countdown-status" id="countdown-status" style="display: none;">The meeting has started!</div>
+        </div>
+
+        <!-- Primary CTA Button -->
+        <div class="hero-actions reveal">
+          <a href="#register" class="btn btn-primary btn-large btn-wobble">
+            <span>Register Now</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#about" class="btn btn-secondary">
+            <span>Mission Briefing</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <span class="section-tag">MISSION PARAMETERS</span>
+          <h2 class="section-title">Are You Crewmate or Impostor?</h2>
+          <p class="section-description">
+            Prepare for an evening of thrilling deception, quick-thinking strategy, and frantic sabotage. 
+            3 rounds of Among Us, teams of 10, prizes for the best crewmate and best impostor.
+          </p>
+        </div>
+
+        <!-- 3 Info Cards: Date, Venue, Entry -->
+        <div class="info-cards-grid">
+          <!-- Card 1: Date -->
+          <article class="info-card reveal">
+            <div class="card-icon-bubble card-icon-yellow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <span class="card-kicker">LAUNCH DATE</span>
+            <h3 class="card-title">17 october 2026</h3>
+            <p class="card-detail">Reporting time: <strong>5:00 PM</strong> sharp. Don't be late or your lobby will launch without you!</p>
+          </article>
+
+          <!-- Card 2: Venue -->
+          <article class="info-card reveal">
+            <div class="card-icon-bubble card-icon-cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="card-kicker">SECTOR LOCATION</span>
+            <h3 class="card-title">NTB , Room- TC103</h3>
+            <p class="card-detail">Equipped with high-speed campus Wi-Fi, projector screens, and audio for live emergency debates.</p>
+          </article>
+
+          <!-- Card 3: Entry -->
+          <article class="info-card reveal">
+            <div class="card-icon-bubble card-icon-green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <span class="card-kicker">ADMISSION</span>
+            <h3 class="card-title">Free, open to all students</h3>
+            <p class="card-detail">Bring your smartphone or laptop with Among Us installed. No entry fee or experience required.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SCHEDULE SECTION (Styled as "Tasks" List) -->
+    <section class="schedule-section" id="schedule">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <span class="section-tag section-tag-yellow">COMMUNICATIONS TERMINAL</span>
+          <h2 class="section-title">Evening Tasks Timeline</h2>
+          <p class="section-description">
+            Complete your scheduled tasks before the impostor sabotages the system. Keep your eyes open and trust no one.
+          </p>
+        </div>
+
+        <!-- In-game "Tasks" Styled Interface -->
+        <div class="tasklist-container reveal">
+          <div class="tasklist-topbar">
+            <div class="tasklist-header-left">
+              <span class="tasklist-lamp"></span>
+              <span class="tasklist-heading">TOTAL TASKS COMPLETED</span>
+            </div>
+            <div class="task-progress-bar-wrap">
+              <div class="task-progress-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+
+          <div class="task-items-list">
+            <!-- Task 1 -->
+            <div class="task-item">
+              <div class="task-checkbox" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="task-time-badge">05:00 PM</div>
+              <div class="task-details">
+                <h4 class="task-title">Swipe Card: Check-in & Team Assembly</h4>
+                <p class="task-desc">Verify student IDs, receive your crew badge, and get assigned to your 10-player lobby.</p>
+              </div>
+              <span class="task-room-tag">Cafeteria</span>
+            </div>
+
+            <!-- Task 2 -->
+            <div class="task-item">
+              <div class="task-checkbox" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="task-time-badge">05:30 PM</div>
+              <div class="task-details">
+                <h4 class="task-title">Calibrate Nav: Round 1 (The Warmup)</h4>
+                <p class="task-desc">The first round begins across all lobbies. 10 players per lobby, 2 impostors lurking.</p>
+              </div>
+              <span class="task-room-tag">Navigation</span>
+            </div>
+
+            <!-- Task 3 -->
+            <div class="task-item">
+              <div class="task-checkbox" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="task-time-badge">06:15 PM</div>
+              <div class="task-details">
+                <h4 class="task-title">Fix Wiring: Round 2 (Reactor Pressure)</h4>
+                <p class="task-desc">Lobbies shuffle. Sabotages become frequent, task completion speed increases, deception intensifies.</p>
+              </div>
+              <span class="task-room-tag">Reactor</span>
+            </div>
+
+            <!-- Task 4 -->
+            <div class="task-item">
+              <div class="task-checkbox" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="task-time-badge">07:00 PM</div>
+              <div class="task-details">
+                <h4 class="task-title">Divert Power: Final Round (The Championship)</h4>
+                <p class="task-desc">Top crewmates and deadliest impostors from rounds 1 & 2 battle in a high-stakes championship lobby.</p>
+              </div>
+              <span class="task-room-tag">Electrical</span>
+            </div>
+
+            <!-- Task 5 -->
+            <div class="task-item">
+              <div class="task-checkbox" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="task-time-badge">07:45 PM</div>
+              <div class="task-details">
+                <h4 class="task-title">Emergency Meeting: Victory & Prize Ceremony</h4>
+                <p class="task-desc">Announcement of the Best Crewmate, Best Impostor, and Team Champions followed by awards.</p>
+              </div>
+              <span class="task-room-tag">Admin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PRIZES / HIGHLIGHTS SECTION -->
+    <section class="prizes-section" id="prizes">
+      <div class="section-container">
+        <div class="section-header reveal">
+          <span class="section-tag section-tag-purple">MISSION BOUNTIES</span>
+          <h2 class="section-title">Prizes & Accolades</h2>
+          <p class="section-description">
+            Showcase your detective prowess or deceptive cunning to take home the glory and exclusive trophies.
+          </p>
+        </div>
+
+        <div class="prizes-grid">
+          <!-- Prize 1: Best Crewmate -->
+          <article class="prize-card reveal">
+            <div class="prize-badge-banner">DETECTIVE AWARD</div>
+            <div class="prize-illustration">
+              <svg viewBox="0 0 120 145" class="prize-crewmate">
+                <use href="#crewmate-graphic" class="crewmate-cyan"></use>
+              </svg>
+            </div>
+            <h3 class="prize-title">Best Crewmate</h3>
+            <p class="prize-tagline">The Master Sleuth</p>
+            <p class="prize-desc">
+              Awarded for solving emergency meetings, catching impostors in the act, and completing every assigned task at record speed.
+            </p>
+            <ul class="prize-perks">
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Exclusive Crewmate Champion Trophy
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Gaming Swag & Campus Voucher
+              </li>
+            </ul>
+          </article>
+
+          <!-- Prize 2: Best Impostor -->
+          <article class="prize-card prize-card-featured reveal">
+            <div class="prize-badge-banner prize-badge-red">DECEPTION MASTER</div>
+            <div class="prize-illustration">
+              <svg viewBox="0 0 120 145" class="prize-crewmate">
+                <use href="#crewmate-graphic" class="crewmate-red"></use>
+              </svg>
+            </div>
+            <h3 class="prize-title">Best Impostor</h3>
+            <p class="prize-tagline">The Ghost in the Vents</p>
+            <p class="prize-desc">
+              Awarded to the most cunning infiltrator who fabricated flawless alibis, executed silent eliminations, and fooled everyone.
+            </p>
+            <ul class="prize-perks">
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Golden Vent Trophy & Crown
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Grand Impostor Prize Bundle
+              </li>
+            </ul>
+          </article>
+
+          <!-- Prize 3: Team Prize -->
+          <article class="prize-card reveal">
+            <div class="prize-badge-banner">CO-OP HONORS</div>
+            <div class="prize-illustration">
+              <svg viewBox="0 0 120 145" class="prize-crewmate">
+                <use href="#crewmate-graphic" class="crewmate-yellow"></use>
+              </svg>
+            </div>
+            <h3 class="prize-title">Team Prize</h3>
+            <p class="prize-tagline">The Surviving Syndicate</p>
+            <p class="prize-desc">
+              Awarded to the top-ranked lobby team demonstrating unmatched communication, synchronized tasking, and mutual trust.
+            </p>
+            <ul class="prize-perks">
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Team Victory Medals
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Shared Victory Pizza & Goodie Hamper
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. REGISTRATION FORM SECTION -->
+    <section class="register-section" id="register">
+      <div class="section-container">
+        <div class="register-card reveal">
+          <div class="register-header">
+            <div class="register-icon-wrap">
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <line x1="20" y1="8" x2="20" y2="14"></line>
+                <line x1="23" y1="11" x2="17" y2="11"></line>
+              </svg>
+            </div>
+            <h2 class="register-title">Sign The Ship's Manifest</h2>
+            <p class="register-subtitle">
+              Secure your spot in the airlock. Free admission, open to all students. Limited to 60 player slots!
+            </p>
+          </div>
+
+          <form id="registration-form" class="registration-form" novalidate>
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="fullName" class="form-label">
+                Full Name <span class="required-indicator">*</span>
+              </label>
+              <div class="input-container">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  class="form-input" 
+                  placeholder="e.g. Alex Henderson" 
+                  required 
+                  aria-describedby="fullName-error"
+                />
+              </div>
+              <span class="field-error" id="fullName-error" role="alert"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email" class="form-label">
+                Email Address <span class="required-indicator">*</span>
+              </label>
+              <div class="input-container">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="e.g. yourname@university.edu" 
+                  required 
+                  aria-describedby="email-error"
+                />
+              </div>
+              <span class="field-error" id="email-error" role="alert"></span>
+            </div>
+
+            <!-- Phone (Optional) -->
+            <div class="form-group">
+              <label for="phone" class="form-label">
+                Phone Number <span class="optional-tag">(Optional)</span>
+              </label>
+              <div class="input-container">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="form-input" 
+                  placeholder="e.g. +1 555-0199" 
+                  aria-describedby="phone-error"
+                />
+              </div>
+              <span class="field-error" id="phone-error" role="alert"></span>
+            </div>
+
+            <!-- Preferred Crewmate Color Picker -->
+            <div class="form-group">
+              <label class="form-label">
+                Preferred Spacesuit Color: <span class="selected-color-label" id="color-name-display">Red</span>
+              </label>
+              <div class="color-picker-grid" role="radiogroup" aria-label="Preferred Spacesuit Color">
+                <button type="button" class="color-swatch active" data-color="Red" data-hex="#F45858" aria-label="Select Red Suit" aria-checked="true" role="radio">
+                  <span class="color-dot" style="background-color: #F45858;"></span>
+                  <span class="color-dot-name">Red</span>
+                </button>
+                <button type="button" class="color-swatch" data-color="Cyan" data-hex="#67C9F5" aria-label="Select Cyan Suit" aria-checked="false" role="radio">
+                  <span class="color-dot" style="background-color: #67C9F5;"></span>
+                  <span class="color-dot-name">Cyan</span>
+                </button>
+                <button type="button" class="color-swatch" data-color="Yellow" data-hex="#FFD166" aria-label="Select Yellow Suit" aria-checked="false" role="radio">
+                  <span class="color-dot" style="background-color: #FFD166;"></span>
+                  <span class="color-dot-name">Yellow</span>
+                </button>
+                <button type="button" class="color-swatch" data-color="Green" data-hex="#8DD982" aria-label="Select Green Suit" aria-checked="false" role="radio">
+                  <span class="color-dot" style="background-color: #8DD982;"></span>
+                  <span class="color-dot-name">Green</span>
+                </button>
+                <button type="button" class="color-swatch" data-color="Purple" data-hex="#B8A5F5" aria-label="Select Purple Suit" aria-checked="false" role="radio">
+                  <span class="color-dot" style="background-color: #B8A5F5;"></span>
+                  <span class="color-dot-name">Purple</span>
+                </button>
+                <button type="button" class="color-swatch" data-color="Peach" data-hex="#FFE5D1" aria-label="Select Peach Suit" aria-checked="false" role="radio">
+                  <span class="color-dot" style="background-color: #FFE5D1;"></span>
+                  <span class="color-dot-name">Peach</span>
+                </button>
+                <button type="button" class="color-swatch" data-color="Pink" data-hex="#FF85B3" aria-label="Select Pink Suit" aria-checked="false" role="radio">
+                  <span class="color-dot" style="background-color: #FF85B3;"></span>
+                  <span class="color-dot-name">Pink</span>
+                </button>
+                <button type="button" class="color-swatch" data-color="Orange" data-hex="#FF9F43" aria-label="Select Orange Suit" aria-checked="false" role="radio">
+                  <span class="color-dot" style="background-color: #FF9F43;"></span>
+                  <span class="color-dot-name">Orange</span>
+                </button>
+              </div>
+              <input type="hidden" name="suitColor" id="suitColor" value="Red" />
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block btn-submit" id="submit-btn">
+              <span>Join the Crew</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">
+            <svg class="footer-mini-crewmate" viewBox="0 0 120 145" aria-hidden="true">
+              <use href="#crewmate-graphic" class="crewmate-cyan"></use>
+            </svg>
+            <span>Among Us: Emergency Meeting</span>
+          </div>
+          <p class="footer-tagline">Play smart. Lie better. Survive longer.</p>
+        </div>
+
+        <div class="footer-contact">
+          <span class="footer-label">Questions & Inquiries</span>
+          <a href="mailto:ambalikaroy05@gmail.com" class="footer-email-link">
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>ambalikaroy05@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-credit">Handcrafted with passion for the campus gaming community.</p>
+        <p class="footer-disclaimer">
+          This is a fan-made student project not affiliated with Innersloth. All Among Us inspirations belong to their respective creators.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EMERGENCY MEETING SUCCESS POPUP MODAL -->
+  <div class="modal-backdrop" id="emergency-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal-dialog emergency-alert-box">
+      <!-- Animated Red Emergency Siren Indicator -->
+      <div class="siren-flasher" aria-hidden="true"></div>
+
+      <!-- Close Button -->
+      <button class="modal-close-btn" id="modal-close" aria-label="Close emergency notification">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Big Bold Alert Header -->
+      <div class="emergency-banner-box">
+        <div class="emergency-banner-text">EMERGENCY MEETING!</div>
+      </div>
+
+      <div class="modal-crewmate-hero" aria-hidden="true">
+        <svg viewBox="0 0 120 145" class="modal-crewmate-svg" id="modal-crewmate-avatar">
+          <use href="#crewmate-graphic" class="crewmate-red"></use>
+        </svg>
+      </div>
+
+      <h3 class="modal-headline" id="modal-heading">Emergency meeting called! You're registered.</h3>
+      
+      <p class="modal-body-text">
+        Welcome aboard, Crewmate <strong id="registered-name" class="highlight-text">Astronaut</strong>! Your ship pass has been confirmed for Sector <strong class="highlight-text">NTB , Room- TC103</strong> on <strong class="highlight-text">17 October 2026 at 5:00 PM</strong>.
+      </p>
+
+      <div class="modal-badge-info">
+        <span class="badge-chip">Color Assigned: <strong id="registered-color">Red</strong></span>
+        <span class="badge-chip chip-green">Status: Verified</span>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block modal-dismiss-btn" id="modal-confirm-btn">
+        Return to Ship
+      </button>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
